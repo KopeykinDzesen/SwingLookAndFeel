@@ -5,10 +5,12 @@ import java.awt.event.ActionListener;
 
 public class Main {
 
+    static JFrame jFrame = getJFrame();
+    static JPanel jPanel = new JPanel();
+
     public static void main(String[] args) {
 
-        JFrame jFrame = getJFrame();
-        JPanel jPanel = new JPanel();
+
         jFrame.add(jPanel);
 
 //        UIManager.LookAndFeelInfo[] lookAndFeelInfos = UIManager.getInstalledLookAndFeels();
@@ -31,6 +33,7 @@ public class Main {
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
                     UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+                    jPanel.repaint();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -40,6 +43,7 @@ public class Main {
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
                     UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+                    jPanel.repaint();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -49,6 +53,7 @@ public class Main {
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+                    jPanel.repaint();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -58,6 +63,7 @@ public class Main {
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+                    jPanel.repaint();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
